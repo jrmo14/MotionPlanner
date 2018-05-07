@@ -127,6 +127,8 @@ class PathGen(Frame):
             self.nodes = self.nodes[:-1]
         else:
             self.invalid_node_count()
+        self.remove_lines()
+        self.generate_path()
 
     def invalid_node_count(self):
         self.node_manip = Label(self.master, text="ERROR: not enough nodes for requested operation")
